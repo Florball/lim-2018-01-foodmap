@@ -13,22 +13,37 @@ const getRestaurant = (value) => {
   containerOfRestaurant.innerHTML='';
   for (let key of restaurants) {
     if (key.district === value) {
-      // Contenido pintado
+      // Contenedor de restaurantes
     containerOfRestaurant.innerHTML += `<div class="col center s12">
-    <ul>
-      <li>${key.name}</li>
-    </ul>
-  </div>`;
-    }; 
+      <ul>
+        <li>${key.name}</li>
+      </ul>
+    </div>`;
+    };
+  // switch(input.value) {
+  //   case 'BARRANCO':
+  //   containerOfRestaurant.innerHTML += `<div class="col center s12">
+  //     <ul>
+  //       <li>${key.name}</li>
+  //       </ul>
+  //     </div>`;
+  //     break;
+  //   case SURCO:
+  //     code ;
+  //     break;
+  //   case cost:
+  //     code block;
+  //     break;
+  // };
   };
 };
 
-// Evento select
+// Evento change select
 districtSelect.addEventListener('change', (e) => {
   getRestaurant(e.target.value);
 });
 
-// Evento keyup 
+// Evento keyup input
 searchRestaurant.addEventListener('keyup', (e) => { // El evento keyup en un addevEventListener ocurre cuando el usuario suelta una tecla (en el teclado)
-  getRestaurant(event.target.value); 
+  getRestaurant(event.target.value.toUpperCase()); 
 });
