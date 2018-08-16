@@ -12,7 +12,7 @@ let containerOfRestaurant = document.getElementById('list-of-restaurants')
 const getRestaurant = (value) => {
   containerOfRestaurant.innerHTML='';
   for (let key of restaurants) {
-    if (key.district === value) {
+    if (key.district === value || key.name === value) {
       // Contenedor de restaurantes
     containerOfRestaurant.innerHTML += `<div class="col center s12">
       <ul>
