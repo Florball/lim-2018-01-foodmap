@@ -1,40 +1,42 @@
+// select
+const districtSelect = document.getElementById('district-select');
 // input
 const searchRestaurant = document.getElementById('icon_prefix');
 // Boton para buscar
-let search = document.getElementById('search');
-// Contenedor de restaurantes
-let containerOfRestaurant = document.getElementById('list-of-restaurants');
+const search = document.getElementById('search');
+//Contenedor de restaurantes
 
-// escuchando evento click
-// search.addEventListener('click', searchOfRestaurants);
-
+let containerOfRestaurant = document.getElementById('list-of-restaurants')
+//falta agregar foto de restaurante
 // Recorrer
-let tourRestaurant = '';
-let restaurantFilter = () => {
+const getRestaurant = (value) => {
+  containerOfRestaurant.innerHTML='';
   for (let restaurant of restaurants) {
-console.log(restaurant);
-  
-    // tourRestaurant += restaurant + ': ' + restaurants[restaurant];
-    // tourRestaurant += '<br>';
-  }
-  console.log(tourRestaurant);
+    if (restaurant.district === value) {
+      // Contenido pintado
+    containerOfRestaurant.innerHTML += `<div class="col center s12">
+    <ul>
+      <li>${restaurant.name}</li>
+    </ul>
+  </div>`;
+    }; 
+  };
 };
-restaurantFilter();
 
-// Contenido pintado
-containerOfRestaurant.innerHTML = `<div class="col center s12">
-<ul>
-  <li>
-    <a class="" href="#!">Link 1</a>
-  </li>
-  <li>
-    <a class="" href="#!">Link 2</a>
-  </li>
-  <li>
-    <a class="" href="#!">Link 3</a>
-  </li>
-  <li>
-    <a class="" href="#!">Link 4</a>
-  </li>
-</ul>
-</div>`;
+// Filtra por select
+districtSelect.addEventListener('change', (e) => {
+  getRestaurant(e.target.value)
+});
+
+
+
+
+//  const list = restaurantesBarranquinos.filter((barranco) => {
+//   let nombre = barranco.name.toUpperCase();
+//   nombre = nombre.indexOf(search.toUpperCase()) + 1;
+//   return nombre;
+// });
+// //  funcion de evento keyup para filtrar
+// searchRestaurant.addEventListener('keyup', (event) => { // El evento keyup en un addevEventListener ocurre cuando el usuario suelta una tecla (en el teclado)
+//   filter(event.target.value); 
+// });
