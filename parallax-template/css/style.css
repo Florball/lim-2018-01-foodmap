@@ -25,6 +25,15 @@ p {
   font-size: 65px;
 }
 
+.modal-block {
+  z-index: 1003;
+  display: block;
+  opacity: 1;
+  top: 10%;
+  transform: scaleX(1) scaleY(1);
+}
+
+
 /* estilos para texto de footer */
 .pointer {
   cursor: pointer;
@@ -48,6 +57,13 @@ p {
   #index-banner .section {
     top: 10%;
   }
+}
+
+.show {
+  display: block;
+} 
+.hide {
+  display: none;
 }
 
 @media only screen and (max-width : 600px) {
