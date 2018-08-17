@@ -5,7 +5,9 @@ const searchRestaurant = document.getElementById('icon_prefix');
 // Boton para buscar
 const search = document.getElementById('search');
 //Contenedor de restaurantes
-let containerOfRestaurant = document.getElementById('list-of-restaurants')
+const containerOfRestaurant = document.getElementById('list-of-restaurants')
+// contenedor de mapa
+const containerMap = document.getElementById('container-map');
 
 //falta agregar foto de restaurante
 // Restaurante por distrito
@@ -32,3 +34,8 @@ districtSelect.addEventListener('change', (e) => {
 searchRestaurant.addEventListener('keyup', (e) => { // El evento keyup en un addevEventListener ocurre cuando el usuario suelta una tecla (en el teclado)
   getRestaurant(event.target.value.toUpperCase()); 
 });
+
+// esconder mapa
+if (!validate(input)) {
+  container.classList.replace('show', 'hide');
+}

@@ -64,6 +64,11 @@ p {
   .left-align {
     margin-left: 0%;
   }
+
+  /* Tamaño de imagen responsive para mapa de Barranco */
+  .image-map {
+    width: 350px;
+  }
 }
 
 .icon-block {
@@ -75,4 +80,11 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+@media only screen and (max-width : 450px) {
+  /* Tamaño de imagen responsive para mapa de Barranco */
+  .image-map {
+    width: 250px;
+  }
 }
