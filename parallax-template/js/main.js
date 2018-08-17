@@ -36,6 +36,6 @@ searchRestaurant.addEventListener('keyup', (e) => { // El evento keyup en un add
 });
 
 // esconder mapa
-if (!validate(input)) {
-  container.classList.replace('show', 'hide');
-}
+// if (districtSelect === ) {
+//   container.classList.replace('show', 'hide');
+// }
