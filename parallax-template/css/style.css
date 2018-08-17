@@ -11,6 +11,7 @@ nav .brand-logo {
   color: #000;
 }
 
+/* tamaño de logo */
 .logo {
   width: 5.5%;
   padding-top: 0.7%;
@@ -22,6 +23,11 @@ p {
 
 .teal-text {
   font-size: 65px;
+}
+
+/* estilos para texto de footer */
+.pointer {
+  cursor: pointer;
 }
 
 .parallax-container {
