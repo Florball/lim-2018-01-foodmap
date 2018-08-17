@@ -20,30 +20,15 @@ const getRestaurant = (value) => {
       </ul>
     </div>`;
     };
-  // switch(input.value) {
-  //   case 'BARRANCO':
-  //   containerOfRestaurant.innerHTML += `<div class="col center s12">
-  //     <ul>
-  //       <li>${key.name}</li>
-  //       </ul>
-  //     </div>`;
-  //     break;
-  //   case SURCO:
-  //     code ;
-  //     break;
-  //   case cost:
-  //     code block;
-  //     break;
-  // };
   };
 };
 
-// Evento change select
+// Evento change en select, seleciona por distrito 
 districtSelect.addEventListener('change', (e) => {
   getRestaurant(e.target.value);
 });
 
-// Evento keyup input
+// Evento keyup en input, seleciona por nombre de restaurante o por distrito
 searchRestaurant.addEventListener('keyup', (e) => { // El evento keyup en un addevEventListener ocurre cuando el usuario suelta una tecla (en el teclado)
   getRestaurant(event.target.value.toUpperCase()); 
 });
