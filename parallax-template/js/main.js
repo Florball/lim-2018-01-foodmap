@@ -1,12 +1,7 @@
-// select
+//Elementos select, input, contenedor de restaurantes Y contenedor de mapa
 const districtSelect = document.getElementById('district-select');
-// input
 const searchRestaurant = document.getElementById('icon_prefix');
-// Boton para buscar
-const search = document.getElementById('search');
-//Contenedor de restaurantes
-const containerOfRestaurant = document.getElementById('list-of-restaurants')
-// contenedor de mapa
+const containerOfRestaurant = document.getElementById('list-of-restaurants');
 const containerMap = document.getElementById('container-map');
 
 //falta agregar foto de restaurante
@@ -28,14 +23,18 @@ const getRestaurant = (value) => {
 // Evento change en select, seleciona por distrito 
 districtSelect.addEventListener('change', (e) => {
   getRestaurant(e.target.value);
+  // Esconde mapa
+  containerMap.classList.replace('show', 'hide');
 });
 
 // Evento keyup en input, seleciona por nombre de restaurante o por distrito
-searchRestaurant.addEventListener('keyup', (e) => { // El evento keyup en un addevEventListener ocurre cuando el usuario suelta una tecla (en el teclado)
-  getRestaurant(event.target.value.toUpperCase()); 
+searchRestaurant.addEventListener('keyup', (e) => {
+  getRestaurant(e.target.value.toUpperCase());
+  // Esconde mapa
+  containerMap.classList.replace('show', 'hide'); 
 });
 
-// esconder mapa
-// if (districtSelect === ) {
-//   container.classList.replace('show', 'hide');
-// }
+// // Evento click en restaurante, muestra modal 
+// restaurantName.addEventListener('click', () => {
+//   document.getElementById('modal1').classList.add('modal');
+// });
